@@ -65,14 +65,6 @@ class User extends Resource
                 ->onlyOnForms()
                 ->creationRules($this->passwordRules())
                 ->updateRules($this->optionalPasswordRules()),
-
-            BelongsToMany::make('Systems')
-                ->fields(new SystemUserFields),
-
-            // Workaround to get the pivot table field working
-//            Markdown::make('Comment')
-//                ->onlyOnIndex()
-//                ->hideFromIndex(),
         ];
     }
 
