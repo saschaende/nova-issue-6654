@@ -4,6 +4,7 @@ namespace App\Nova;
 
 use App\Models\Test;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Code;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Text;
@@ -40,7 +41,7 @@ class TestResource extends Resource
                 ]),
 
                 Tab::make('Tab 2', [
-                    Markdown::make('Markdown B')
+                    Code::make('Markdown B')
                         ->sortable()
                         ->rules('nullable'),
                 ]),
